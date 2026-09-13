@@ -3,9 +3,185 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Главная страница</title> 
+        <title>Главная страница</title>
+        <link rel="icon" type="image/svg+xml" href="/style/favicon.svg">
+        <link rel="stylesheet" href="/style/style.css">
     </head>
     <body>
+        <header class="site-header">
+            <div class="container nav">
+                <div class="brand">
+                    <span class="brand-mark">✈</span>
+                    <span>SkyTicket</span>
+                </div>
+                <nav class="main-nav" aria-label="Главное меню">
+                    <a href="#">Главная</a>
+                    <a href="#popular">Направления</a>
+                    <a href="#news">Новости</a>
+                    <a href="#offers">Спецпредложения</a>
+                </nav>
+                <button class="nav-button">Купить билет</button>
+            </div>
+        </header>
 
+        <main>
+            <section class="hero">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <p class="eyebrow">Лёгкие путешествия в любой сезон</p>
+                        <h1>Найдите идеальный перелёт с комфортом и выгодой</h1>
+                        <p class="hero-description">
+                            SkyTicket помогает быстро сравнивать авиабилеты, выбирать лучшие цены
+                            и планировать поездки в любимые города и страны.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="primary-button">Поиск билетов</button>
+                            <button class="secondary-button">Посмотреть акции</button>
+                        </div>
+                        <ul class="hero-stats">
+                            <li><strong>1.2M+</strong><span>пассажиров</span></li>
+                            <li><strong>250+</strong><span>маршрутов</span></li>
+                            <li><strong>24/7</strong><span>поддержка</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="booking-card" aria-label="Форма поиска билетов">
+                        <div class="card-header">
+                            <h2>Найти билет</h2>
+                            <span>Лучшие цены</span>
+                        </div>
+
+                        <form class="booking-form">
+                            <label>
+                                Откуда
+                                <input type="text" value="Москва" aria-label="Откуда">
+                            </label>
+                            <label>
+                                Куда
+                                <input type="text" value="Сочи" aria-label="Куда">
+                            </label>
+                            <div class="form-row">
+                                <label>
+                                    Туда
+                                    <input type="date" value="2026-09-20" aria-label="Дата туда">
+                                </label>
+                                <label>
+                                    Обратно
+                                    <input type="date" value="2026-09-27" aria-label="Дата обратно">
+                                </label>
+                            </div>
+                            <label>
+                                Пассажиры
+                                <select aria-label="Пассажиры">
+                                    <option>1 взрослый</option>
+                                    <option>2 взрослых</option>
+                                    <option>семья</option>
+                                </select>
+                            </label>
+                            <button type="submit" class="primary-button wide">Найти перелёт</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popular" id="popular">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="eyebrow">Популярные направления</p>
+                        <h2>Самые востребованные маршруты</h2>
+                    </div>
+
+                    <div class="destination-grid">
+                        <article class="destination-card">
+                            <div class="destination-image image-1"></div>
+                            <div class="destination-content">
+                                <div class="destination-topline">
+                                    <span class="city">Сочи</span>
+                                    <span class="price">от 4 900 ₽</span>
+                                </div>
+                                <p>Тёплое море, горы и идеальный отдых на юге России.</p>
+                            </div>
+                        </article>
+
+                        <article class="destination-card">
+                            <div class="destination-image image-2"></div>
+                            <div class="destination-content">
+                                <div class="destination-topline">
+                                    <span class="city">Стамбул</span>
+                                    <span class="price">от 8 200 ₽</span>
+                                </div>
+                                <p>Культурные прогулки, восточная атмосфера и вкусная кухня.</p>
+                            </div>
+                        </article>
+
+                        <article class="destination-card">
+                            <div class="destination-image image-3"></div>
+                            <div class="destination-content">
+                                <div class="destination-topline">
+                                    <span class="city">Париж</span>
+                                    <span class="price">от 11 600 ₽</span>
+                                </div>
+                                <p>Элегантные улицы, искусство и романтические маршруты.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news" id="news">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="eyebrow">Новости и советы</p>
+                        <h2>Актуальные статьи для путешественников</h2>
+                    </div>
+
+                    <div class="news-grid">
+                        <article class="news-card">
+                            <div class="news-badge">Советы</div>
+                            <h3>Как выбрать лучший билет без переплаты</h3>
+                            <p>
+                                Узнайте, на что обратить внимание при сравнении цен, времени вылета и условий бронирования.
+                            </p>
+                            <a href="#">Читать подробнее</a>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-badge">Гид</div>
+                            <h3>Топ-5 городов для короткого выезда в выходные</h3>
+                            <p>
+                                Подборка направлений, где можно быстро улететь, отдохнуть и вернуться без лишних хлопот.
+                            </p>
+                            <a href="#">Читать подробнее</a>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-badge">Акции</div>
+                            <h3>Скидки на билеты до конца месяца: самые выгодные предложения</h3>
+                            <p>
+                                Следите за сезонами распродаж и ловите акции на популярные маршруты по всей стране.
+                            </p>
+                            <a href="#">Читать подробнее</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <div>
+                    <div class="brand footer-brand">
+                        <span class="brand-mark">✈</span>
+                        <span>SkyTicket</span>
+                    </div>
+                    <p>Покупка авиа билетов быстро, удобно и выгодно.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">О сервисе</a>
+                    <a href="#">Поддержка</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
