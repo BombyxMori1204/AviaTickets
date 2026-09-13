@@ -8,21 +8,7 @@
         <link rel="stylesheet" href="/style/style.css">
     </head>
     <body>
-        <header class="site-header">
-            <div class="container nav">
-                <div class="brand">
-                    <span class="brand-mark">✈</span>
-                    <span>SkyTicket</span>
-                </div>
-                <nav class="main-nav" aria-label="Главное меню">
-                    <a href="#">Главная</a>
-                    <a href="#popular">Направления</a>
-                    <a href="#news">Новости</a>
-                    <a href="#offers">Спецпредложения</a>
-                </nav>
-                <button class="nav-button">Купить билет</button>
-            </div>
-        </header>
+        {% include 'header.html' %}
 
         <main>
             <section class="hero">
@@ -35,7 +21,7 @@
                             и планировать поездки в любимые города и страны.
                         </p>
                         <div class="hero-actions">
-                            <button class="primary-button">Поиск билетов</button>
+                            <a href="{{ url_for('table') }}" class="primary-button">Поиск билетов</a>
                             <button class="secondary-button">Посмотреть акции</button>
                         </div>
                         <ul class="hero-stats">

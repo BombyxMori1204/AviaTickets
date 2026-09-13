@@ -392,6 +392,68 @@ select {
     color: var(--sky-700);
 }
 
+.table-page {
+    padding: 50px 0 70px;
+}
+
+.table-section {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(98, 183, 243, 0.18);
+    border-radius: 28px;
+    box-shadow: var(--shadow-soft);
+    padding: 28px;
+}
+
+.table-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.table-header-row h1 {
+    margin: 0;
+    color: var(--navy-900);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 24px;
+}
+
+.flight-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.flight-table th,
+.flight-table td {
+    border-bottom: 1px solid rgba(98, 183, 243, 0.18);
+    padding: 16px 14px;
+    text-align: left;
+}
+
+.flight-table thead th {
+    background: linear-gradient(135deg, var(--sky-200), var(--sky-300));
+    color: var(--navy-900);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.flight-table tbody tr:hover {
+    background: rgba(98, 183, 243, 0.05);
+}
+
+.flight-table td {
+    color: var(--text-700);
+    font-size: 0.98rem;
+}
+
 .site-footer {
     background: linear-gradient(180deg, #dff3ff, #c9eafe);
     border-top: 1px solid rgba(98, 183, 243, 0.2);

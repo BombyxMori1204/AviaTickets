@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Таблица билетов</title>
+        <link rel="icon" type="image/svg+xml" href="/style/favicon.svg">
+        <link rel="stylesheet" href="/style/style.css">
+    </head>
+    <body>
+        {% include 'header.html' %}
+
+        <main class="table-page">
+            <div class="container">
+                <section class="table-section">
+                    <p class="eyebrow">Результаты поиска</p>
+                    <div class="table-header-row">
+                        <h1>Доступные перелёты</h1>
+                        <a href="{{ url_for('home') }}" class="primary-button">Назад</a>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="flight-table">
+                            <thead>
+                                <tr>
+                                    <th>Время вылета</th>
+                                    <th>Время прибытия</th>
+                                    <th>Откуда</th>
+                                    <th>Куда</th>
+                                    <th>Номер рейса</th>
+                                    <th>Стоимость</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for flight in flights %}
+                                <tr>
+                                    <td>{{ flight.departure_time }}</td>
+                                    <td>{{ flight.arrival_time }}</td>
+                                    <td>{{ flight.from_code }}</td>
+                                    <td>{{ flight.to_code }}</td>
+                                    <td>{{ flight.flight_number }}</td>
+                                    <td>{{ flight.price }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <div>
+                    <div class="brand footer-brand">
+                        <span class="brand-mark">✈</span>
+                        <span>SkyTicket</span>
+                    </div>
+                    <p>Покупка авиа билетов быстро, удобно и выгодно.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">О сервисе</a>
+                    <a href="#">Поддержка</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
