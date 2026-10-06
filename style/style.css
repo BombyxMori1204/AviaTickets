@@ -55,6 +55,26 @@ select {
     z-index: 10;
 }
 
+.scroll-plane {
+    position: fixed;
+    top: 78vh;
+    left: 24px;
+    z-index: 0;
+    color: rgba(45, 126, 199, 0.16);
+    font-size: clamp(5rem, 12vw, 10rem);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    transform: translate3d(var(--plane-x, 0px), var(--plane-y, 0px), 0) rotate(-15deg);
+    will-change: transform;
+}
+
+main,
+.site-footer {
+    position: relative;
+    z-index: 1;
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -519,5 +539,16 @@ select {
     .footer-content {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .scroll-plane {
+        left: 10px;
+        font-size: 5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-plane {
+        will-change: auto;
     }
 }

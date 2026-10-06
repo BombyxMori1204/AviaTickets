@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 app = Flask(
     __name__,
@@ -10,6 +10,10 @@ app = Flask(
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/scripts/<path:filename>")
+def scripts(filename):
+    return send_from_directory("scripts", filename)
 
 @app.route("/table")
 def table():
