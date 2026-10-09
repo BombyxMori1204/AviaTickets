@@ -1,0 +1,40 @@
+База: [папка комплекта]/journal.db
+
+ДО
+
+SQL: SELECT id, name, group_id FROM students WHERE id IN (1, 61) ORDER BY id
+Параметры: ()
+id | name           | group_id
+---+----------------+---------
+1  | Иванов Алексей | 1       
+Строк в результате: 1
+INSERT, изменено строк: 1
+UPDATE, изменено строк: 1
+
+ПОСЛЕ INSERT И UPDATE
+
+SQL: SELECT id, name, group_id FROM students WHERE id IN (1, 61) ORDER BY id
+Параметры: ()
+id | name             | group_id
+---+------------------+---------
+1  | Иванов Алексей   | 2       
+61 | Тестовый Студент | 1       
+Строк в результате: 2
+
+SQL: SELECT id, name FROM students WHERE id = ?
+Параметры: (61,)
+id | name            
+---+-----------------
+61 | Тестовый Студент
+Строк в результате: 1
+DELETE, изменено строк: 1
+
+ПОСЛЕ DELETE
+
+SQL: SELECT id, name, group_id FROM students WHERE id IN (1, 61) ORDER BY id
+Параметры: ()
+id | name           | group_id
+---+----------------+---------
+1  | Иванов Алексей | 2       
+Строк в результате: 1
+Восстановите исходную группу: python3 prepare_db.py --reset

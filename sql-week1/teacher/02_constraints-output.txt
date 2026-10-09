@@ -1,0 +1,14 @@
+База: [папка комплекта]/journal.db
+
+foreign_keys: 0
+SQL: INSERT INTO students (name, group_id) VALUES (?, ?) Параметры: ('Проверка связи', 999)
+Добавлено. Ошибки: [('students', 61, 'groups', 0)]
+
+foreign_keys: 1
+SQL: INSERT INTO students (name, group_id) VALUES (?, ?) Параметры: ('Проверка связи', 999)
+IntegrityError: FOREIGN KEY constraint failed
+NOT NULL: NOT NULL constraint failed: students.name
+CHECK: CHECK constraint failed: length(trim(name)) BETWEEN 1 AND 50
+FOREIGN KEY: FOREIGN KEY constraint failed
+UNIQUE: UNIQUE constraint failed: groups.name
+Исходная база не изменена.
