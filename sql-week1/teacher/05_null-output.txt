@@ -1,0 +1,36 @@
+База: [папка комплекта]/journal.db
+
+SQL: SELECT id, email FROM students WHERE id IN (1, 5, 7) ORDER BY id
+Параметры: ()
+id | email                
+---+----------------------
+1  | student01@example.edu
+5  | NULL                 
+7  | ''                   
+Строк в результате: 3
+
+SQL: SELECT id, email FROM students WHERE email = NULL ORDER BY id LIMIT 4
+Параметры: ()
+id | email
+---+------
+Строк в результате: 0
+
+SQL: SELECT id, email FROM students WHERE email IS NULL ORDER BY id LIMIT 4
+Параметры: ()
+id | email
+---+------
+5  | NULL 
+10 | NULL 
+15 | NULL 
+20 | NULL 
+Строк в результате: 4
+
+SQL: SELECT id, email FROM students WHERE email = '' ORDER BY id LIMIT 4
+Параметры: ()
+id | email
+---+------
+7  | ''   
+14 | ''   
+27 | ''   
+34 | ''   
+Строк в результате: 4

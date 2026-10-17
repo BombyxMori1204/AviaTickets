@@ -1,0 +1,8 @@
+
+SQL: SELECT value, typeof(value) AS stored_type, label FROM sample
+Параметры: ()
+value | stored_type | label         
+------+-------------+---------------
+42    | integer     | длинная строка
+текст | text        | abc           
+Строк в результате: 2

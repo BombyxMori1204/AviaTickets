@@ -1,0 +1,13 @@
+PRAGMA foreign_keys = ON;
+SELECT id, name FROM students WHERE group_id = 2 ORDER BY id LIMIT 5;
+SELECT id, name FROM students WHERE group_id IN (1, 3) AND id >= 18 ORDER BY id DESC LIMIT 5;
+SELECT id, name FROM students WHERE id BETWEEN 18 AND 22 ORDER BY id;
+SELECT id, name FROM students WHERE name LIKE 'Иванов%' ORDER BY id;
+SELECT id, email FROM students WHERE email IS NULL ORDER BY id;
+SELECT id, email FROM students WHERE email = '' ORDER BY id;
+INSERT INTO students (id, name, group_id) VALUES (61, 'Новый Студент', 1);
+SELECT id, name, group_id FROM students WHERE id = 61;
+UPDATE students SET group_id = 3 WHERE id = 61;
+SELECT id, name, group_id FROM students WHERE id = 61;
+DELETE FROM students WHERE id = 61;
+SELECT id, name FROM students WHERE id = 61;
